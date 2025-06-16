@@ -2,8 +2,6 @@
 
 export default function Home() {
   return (
-    <div>
-      <h1>We are Hexahype</h1>
-    </div>
-  )
+    <h1 className="text-4xl flex justify-center">Hhhh we are Hexahype</h1>
+  );
 }
