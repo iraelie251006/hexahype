@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-'use client';
+"use client";
 import React, { useRef, useEffect, useCallback, useMemo } from "react";
 import { gsap } from "gsap";
 import { InertiaPlugin } from "gsap/InertiaPlugin";
@@ -295,21 +295,20 @@ const DotGrid: React.FC<DotGridProps> = ({
       style={style}
     >
       <GlareHover
-    glareColor="#ffffff"
-    glareOpacity={0.5}
-    glareAngle={-30}
-    glareSize={300}
-    transitionDuration={800}
-    playOnce={false}
-  >
-    <div ref={wrapperRef} className="w-full h-full relative m-2">
-        <canvas
-          ref={canvasRef}
-          className="absolute inset-0 w-full h-full pointer-events-none"
-        
-        />
-      </div>
-  </GlareHover>
+        glareColor="#ffffff"
+        glareOpacity={0.5}
+        glareAngle={-30}
+        glareSize={300}
+        transitionDuration={800}
+        playOnce={false}
+      >
+        <div ref={wrapperRef} className="w-full h-full relative m-2">
+          <canvas
+            ref={canvasRef}
+            className="absolute inset-0 w-full h-full pointer-events-none"
+          />
+        </div>
+      </GlareHover>
     </section>
   );
 };
