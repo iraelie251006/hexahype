@@ -44,7 +44,7 @@ const Hero = () => {
 
         <div className="absolute inset-0 z-10 flex items-center justify-center overflow-hidden">
           <div
-            className={`flex justify-between max-lg:justify-center items-center w-full h-screen border-2 border-slate-800`}
+            className={`flex justify-between max-lg:justify-center items-center w-full h-screen`}
           >
             <div className="ml-10 max-lg:ml-0 flex justify-center flex-col items-center">
               <ShinyText
