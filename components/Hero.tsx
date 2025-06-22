@@ -7,6 +7,7 @@ import ShinyText from "./ui/Shine";
 import Squares from "./ui/SquareGrid";
 import Iridescence from "./ui/IredeScene";
 import { useTheme } from "next-themes";
+import { SplineScene } from "./ui/splite";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
@@ -42,55 +43,70 @@ const Hero = () => {
         )}
 
         <div className="absolute inset-0 z-10 flex items-center justify-center overflow-hidden">
-          <div className={`${theme === "light" ? "justify-center" : "justify-between"} flex max-lg:justify-center items-center w-full h-screen border-2 border-slate-800`}>
+          <div
+            className={`flex justify-between max-lg:justify-center items-center w-full h-screen border-2 border-slate-800`}
+          >
             <div className="ml-10 max-lg:ml-0 flex justify-center flex-col items-center">
               <ShinyText
                 text="Hexahype"
                 disabled={false}
                 speed={2}
-                className={`${theme === "light" ? "text-[200px]" : "text-7xl md:text-9xl lg:text-9xl"} font-bold flex justify-start`}
+                className={`font-bold text-7xl md:text-9xl lg:text-9xl flex justify-start`}
               />
-              <p className={`${theme === "light" ? "text-[25px] ml-4 mt-0": "text-lg"} ml-2 mt-5 font-mono dark:text-white/60 w-full`}>
+              <p
+                className={`ml-2 text-lg mt-5 font-mono dark:text-white/60 w-full`}
+              >
                 Powering the Future, One Hype at a Time. <br />
                 Shaping Tomorrow with Every Move.
               </p>
             </div>
-            <div className={`${theme === "light" ? "hidden": "block"} mr-10 flex gap-5 flex-col max-lg:hidden`}>
-              <div className="flex justify-center">
-                <div className="h-[214px] w-[214px] rotate-45 top-7">
-                  <DotGrid
-                    dotSize={7}
-                    gap={15}
-                    baseColor="#ffffff"
-                    activeColor="#585555"
-                    proximity={50}
-                    shockRadius={250}
-                    shockStrength={5}
-                    resistance={750}
-                    returnDuration={1.5}
-                  />
+            {theme === "light" ? (
+              <div className="flex-1 relative h-screen">
+                <SplineScene
+                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                  className="w-full h-screen"
+                />
+              </div>
+            ) : (
+              <div
+                className={`${theme === "light" ? "hidden" : "block"} mr-10 flex gap-5 flex-col max-lg:hidden`}
+              >
+                <div className="flex justify-center">
+                  <div className="h-[214px] w-[214px] rotate-45 top-7">
+                    <DotGrid
+                      dotSize={7}
+                      gap={15}
+                      baseColor="#ffffff"
+                      activeColor="#585555"
+                      proximity={50}
+                      shockRadius={250}
+                      shockStrength={5}
+                      resistance={750}
+                      returnDuration={1.5}
+                    />
+                  </div>
+                </div>
+                <div className="flex gap-20">
+                  <div className="h-[214px] w-[214px] rotate-45 top-7">
+                    <LetterGlitch
+                      glitchSpeed={50}
+                      centerVignette={true}
+                      outerVignette={false}
+                      smooth={true}
+                    />
+                  </div>
+                  <div className="h-[214px] w-[214px] rotate-45 top-7">
+                    <Squares
+                      speed={0.5}
+                      squareSize={40}
+                      direction="diagonal" // up, down, left, right, diagonal
+                      borderColor="#fff"
+                      hoverFillColor="#fff"
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="flex gap-20">
-                <div className="h-[214px] w-[214px] rotate-45 top-7">
-                  <LetterGlitch
-                    glitchSpeed={50}
-                    centerVignette={true}
-                    outerVignette={false}
-                    smooth={true}
-                  />
-                </div>
-                <div className="h-[214px] w-[214px] rotate-45 top-7">
-                  <Squares
-                    speed={0.5}
-                    squareSize={40}
-                    direction="diagonal" // up, down, left, right, diagonal
-                    borderColor="#fff"
-                    hoverFillColor="#fff"
-                  />
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
