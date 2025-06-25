@@ -54,14 +54,14 @@ const Hero = () => {
                 className={`font-bold text-7xl md:text-9xl lg:text-9xl flex justify-start`}
               />
               <p
-                className={`ml-2 text-lg mt-5 font-mono dark:text-white/60 w-full`}
+                className={`ml-2 text-lg mt-5 font-mono dark:text-white/60 w-full flex max-sm:justify-center max-sm:text-[15px]`}
               >
                 Powering the Future, One Hype at a Time. <br />
                 Shaping Tomorrow with Every Move.
               </p>
             </div>
             {theme === "light" ? (
-              <div className="flex-1 relative h-screen">
+              <div className="flex-1 relative h-screen max-sm:hidden">
                 <SplineScene
                   scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                   className="w-full h-screen"

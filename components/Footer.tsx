@@ -12,9 +12,9 @@ import ShinyText from "./ui/Shine";
 
 export default function Footer() {
   return (
-    <footer className="bg-[url('/Sprinkle.svg')] bg-no-repeat bg-cover bg-center backdrop-blur-3xl border-t border-gray-200">
-        <div className="border-4 w-full inset-0 backdrop-blur-3xl bg-transparent">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-gray-800 border-4 relative z-10 dark:text-white">
+    <footer className="border-t bg-[#14DBD8]/20">
+        <div className="w-screen backdrop-blur-3xl  bg-[url('/Sprinkle.svg')] bg-no-repeat bg-cover bg-center border-2">
+          <div className="max-w-7xl mx-auto max-sm:mx-5 grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-gray-800 relative z-10 dark:text-white mt-10">
         {/* Brand & Social */}
         <div>
           <div className="mb-4">
@@ -26,38 +26,37 @@ export default function Footer() {
             />
           </div>
           <p className="mb-4 dark:text-white">
-            We are Pan-African Techpreneurs united by a shared mission to
-            transform Rwanda's public transport system.
+            We are Hexahype team united by a shared mission to
+            transform Rwanda's youth through technologia, innovation and Job creation consultation.
           </p>
           <div className="flex gap-3 text-gray-600">
             <Instagram className="w-5 h-5 hover:text-black dark:hover:text-white" />
             <Youtube className="w-5 h-5 hover:text-black dark:hover:text-white" />
             <MailPlus className="w-5 h-5 hover:text-black dark:hover:text-white" />
-            <Github className="w-5 h-5 hover:text-black dark:hover:text-white" />
           </div>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-semibold mb-3 dark:text-white">Quick Links</h4>
+          <h4 className="font-semibold mb-3 dark:text-white text-[20px]">Quick Links</h4>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:underline dark:text-white text-[20px]">
-                home
+              <a href="#" className="hover:underline dark:text-white text-[15px]">
+                Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline dark:text-white text-[20px]">
-                E-lab Challenges
+              <a href="#" className="hover:underline dark:text-white text-[15px]">
+                About
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline dark:text-white text-[20px]">
-                Gallery
+              <a href="#" className="hover:underline dark:text-white text-[15px]">
+                E-Lab
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline dark:text-white text-[20px]">
+              <a href="#" className="hover:underline dark:text-white text-[15px]">
                 Our product
               </a>
             </li>
@@ -69,8 +68,8 @@ export default function Footer() {
           <h4 className="font-semibold mb-3 dark:text-white text-[20px]">Projects</h4>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:underline dark:text-white text-[20px]">
-                Gerayo
+              <a href="#" className="hover:underline dark:text-white text-[15px]">
+                ######
               </a>
             </li>
           </ul>
@@ -80,15 +79,15 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-3 dark:text-white text-[22px]">Contact Us</h4>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-start gap-2 dark:text-white text-[17px]">
+            <li className="flex items-start gap-2 dark:text-white text-[15px]">
               <Mail className="w-4 h-4 mt-1" />
               <span>hexahype@gmail.com</span>
             </li>
-            <li className="flex items-start gap-2 dark:text-white text-[17px]">
+            <li className="flex items-start gap-2 dark:text-white text-[15px]">
               <Phone className="w-4 h-4 mt-1" />
               <span>+250728449408</span>
             </li>
-            <li className="flex items-start gap-2 dark:text-white text-[17px]">
+            <li className="flex items-start gap-2 dark:text-white text-[15px]">
               <MapPin className="w-4 h-4 mt-1" />
               <span>Kigali, Rwanda</span>
             </li>
@@ -97,9 +96,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="mt-10 border-t pt-4 text-xs text-gray-500 flex justify-between items-center max-w-7xl mx-auto">
-        <span>© 2024 HEXAHYPE.</span>
-        <span>All rights reserved.</span>
+      <div className="my-10 border-t border-black dark:border-white pt-4 text-xs text-gray-500 flex justify-between items-center max-w-7xl mx-auto">
+        <span className="dark:text-white mt-2 pt-2 text-sm">© 2024 HEXAHYPE.</span>
+        <span className="dark:text-white mt-2 pt-2 text-sm">All rights reserved.</span>
       </div>  
         </div>
       
