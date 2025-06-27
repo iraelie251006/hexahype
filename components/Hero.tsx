@@ -51,7 +51,7 @@ const Hero = () => {
                 text="Hexahype"
                 disabled={false}
                 speed={2}
-                className={`font-bold text-7xl md:text-9xl lg:text-9xl flex justify-start`}
+                className={`font-bold text-7xl md:text-9xl max-md:text-9xl max-sm:text-[80px] lg:text-9xl flex justify-start`}
               />
               <p
                 className={`ml-2 text-lg mt-5 font-mono dark:text-white/60 w-full flex max-sm:justify-center max-sm:text-[15px]`}
@@ -61,7 +61,7 @@ const Hero = () => {
               </p>
             </div>
             {theme === "light" ? (
-              <div className="flex-1 relative h-screen max-sm:hidden">
+              <div className="flex relative h-screen w-full max-md:hidden">
                 <SplineScene
                   scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                   className="w-full h-screen"
