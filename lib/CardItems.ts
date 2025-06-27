@@ -27,7 +27,7 @@ export const items = [
       url: "https://dribbble.com/",
     },
     {
-      image: "https://i.pravatar.cc/300?img=16",
+      image: "images/Gift.jpeg",
       title: "Providence Gift",
       subtitle: "Kiyongozi",
       handle: "@giftprovi",
