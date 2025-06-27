@@ -33,10 +33,10 @@ export const items = [
       handle: "@giftprovi",
       borderColor: "#EF4444",
       gradient: "linear-gradient(195deg,#EF4444,#000)",
-      url: "https://kaggle.com/",
+      url: "https://www.instagram.com/gift_wa_s.o/profilecard/?igsh=bXp3YXl4M2d0MTE3",
     },
     {
-      image: "https://i.pravatar.cc/300?img=25",
+      image: "images/Gisa.jpeg",
       title: "Gisa Dan",
       subtitle: "Researcher",
       handle: "@gisa",
@@ -45,7 +45,7 @@ export const items = [
       url: "https://github.com/",
     },
     {
-      image: "https://i.pravatar.cc/300?img=60",
+      image: "images/David.jpeg",
       title: "David",
       subtitle: "Video Editor",
       handle: "@david",

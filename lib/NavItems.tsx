@@ -13,12 +13,12 @@ export const navItems = [
   },
   {
     name: "E-Lab",
-    link: "/contact",
+    link: "/e-lab",
     icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Prototype",
-    link: "/contact",
+    link: "/prototype",
     icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
 ];
