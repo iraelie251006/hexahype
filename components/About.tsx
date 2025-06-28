@@ -25,7 +25,7 @@ const About = () => {
           fadeOut={0.6}
           ease="power3.out"
         />
-        <div className="absolute -z-10 inset-0">
+        <div className="absolute -z-10 inset-0 dark:hidden">
           <Iridescence
             color={[1, 1, 1]}
             mouseReact={false}

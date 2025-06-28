@@ -1,6 +1,5 @@
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -21,9 +20,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     if (ref.current) {
       const resizeObserver = new ResizeObserver(() => {
         const rect = ref.current!.getBoundingClientRect();
-      setHeight(rect.height);
+        setHeight(rect.height);
       });
-      
+
       resizeObserver.observe(ref.current);
 
       return () => resizeObserver.disconnect();
@@ -40,36 +39,36 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+      className="w-full bg-white font-sans dark:bg-neutral-950 md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 flex justify-center items-center flex-col">
-        <h2 className="text-3xl font-semibold tracking-tighter md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center px-4 py-20 md:px-8 lg:px-10">
+        <h2 className="mb-4 max-w-4xl text-3xl font-semibold tracking-tighter text-black dark:text-white md:text-4xl">
           Changelog from Our Journey
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm text-center">
-          We&apos;ve been working together for the past 2 months as Hexahype. Here&apos;s
-          a timeline of our journey.
+        <p className="max-w-sm text-center text-sm text-neutral-700 dark:text-neutral-300 md:text-base">
+          We&apos;ve been working together for the past 2 months as Hexahype.
+          Here&apos;s a timeline of our journey.
         </p>
       </div>
 
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative mx-auto max-w-7xl pb-20">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-center pt-10 md:pt-40 md:gap-10"
+            className="flex justify-center pt-10 md:gap-10 md:pt-40"
           >
-            <div className="relative flex flex-col md:flex-row z-40 items-center max-w-xs lg:max-w-sm md:w-full md:hidden">
-              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+            <div className="relative z-40 flex max-w-xs flex-col items-center md:hidden md:w-full md:flex-row lg:max-w-sm">
+              <div className="absolute left-3 flex size-10 items-center justify-center rounded-full bg-black md:left-3">
+                <div className="size-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 border">
+              <h3 className="hidden border text-xl font-bold text-neutral-500 dark:text-neutral-500 md:block md:pl-20 md:text-5xl">
                 {item.title}
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full ">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+            <div className="relative w-full pl-20 pr-4 md:pl-4 ">
+              <h3 className="mb-4 block text-left text-2xl font-bold text-neutral-500 dark:text-neutral-500 md:hidden">
                 {item.title}
               </h3>
               {item.content}{" "}
@@ -80,14 +79,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute max-md:left-8 left-8 md:left-1/2 -translate-x-1/2 top-0 overflow-hidden w-[4px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute left-8 top-0 w-[4px] -translate-x-1/2 overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] dark:via-neutral-700 max-md:left-8  md:left-1/2 "
         >
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[4px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0 w-[4px] rounded-full bg-gradient-to-t from-purple-500 from-0% via-blue-500 via-10% to-transparent"
           />
         </div>
       </div>
