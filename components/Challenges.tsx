@@ -5,39 +5,39 @@ import { Timeline } from "@/components/ui/timeline";
 import { UseResponsiveWidth } from "@/lib/YoutubeOptions";
 
 export function Challenges() {
-    const width = UseResponsiveWidth();
+  const width = UseResponsiveWidth();
 
-    const VideoOptions = {
-        playerVars: {
-          autoplay: 0,
-          controls: 0,
-          rel: 0,
-          showinfo: 0,
-          mute: 0,
-          loop: 1,
-        },
-        width,
-        height: "300",
-        className: "rounded-2xl",
-      };
+  const VideoOptions = {
+    playerVars: {
+      autoplay: 0,
+      controls: 0,
+      rel: 0,
+      showinfo: 0,
+      mute: 0,
+      loop: 1,
+    },
+    width,
+    height: "300",
+    className: "rounded-2xl",
+  };
   const data = [
     {
       title: "29/05/2025",
       content: (
-        <div className="flex justify-between gap-10 w-full">
-          <div className="w-[50%] max-md:hidden">
-            <h1 className="text-center font-bold text-[30px] tracking-tighter">
+        <div className="flex w-full justify-between gap-10">
+          <div className="w-1/2 max-md:hidden">
+            <h1 className="text-center text-[30px] font-bold tracking-tighter">
               Challenge 1
             </h1>
             {/* Horizontal line beside challenge title */}
-            <div className="relative flex items-center justify-center mx-6 my-2">
-              <span className="flex-grow border-t border-gray-400"></span>
-              <p className="font-medium text-meduim text-center border-gray-400 px-2">
+            <div className="relative mx-6 my-2 flex items-center justify-center">
+              <span className="grow border-t border-gray-400"></span>
+              <p className="border-gray-400 px-2 text-center font-medium">
                 Elevator Pitch
               </p>
-              <span className="flex-grow border-t border-gray-400"></span>
+              <span className="grow border-t border-gray-400"></span>
             </div>
-            <p className="font-medium max-w-[1000px] text-dark-body-color/80 text-justify max-sm:pt-2 tracking-tight leading-6 max-sm:px-5">
+            <p className="max-w-[1000px] text-justify font-medium leading-6 tracking-tight max-sm:px-5 max-sm:pt-2">
               Here’s our elevator pitch introducing our names, country,
               interests, and a fun fact. We shared our passions, why we care
               about these issues, our goals for solving them, and the unique
@@ -53,24 +53,24 @@ export function Challenges() {
     {
       title: "06/06/2025",
       content: (
-        <div className="flex justify-between gap-10 w-full">
+        <div className="flex w-full justify-between gap-10">
           <div>
             <YouTube opts={VideoOptions} videoId="1Xf8Vk2zpdU" />
           </div>
 
-          <div className="w-[50%] max-md:hidden">
-            <h1 className="text-center font-bold text-[30px] tracking-tighter">
+          <div className="w-1/2 max-md:hidden">
+            <h1 className="text-center text-[30px] font-bold tracking-tighter">
               Challenge 2
             </h1>
             {/* Horizontal line beside challenge title */}
-            <div className="relative flex items-center justify-center mx-6 my-2">
-              <span className="flex-grow border-t border-gray-400"></span>
-              <p className="font-medium text-meduim text-center border-gray-400 px-2">
+            <div className="relative mx-6 my-2 flex items-center justify-center">
+              <span className="grow border-t border-gray-400"></span>
+              <p className="border-gray-400 px-2 text-center font-medium">
                 Discover Africa
               </p>
-              <span className="flex-grow border-t border-gray-400"></span>
+              <span className="grow border-t border-gray-400"></span>
             </div>
-            <p className="font-medium max-w-[1000px] text-dark-body-color/80 text-justify max-sm:pt-2 tracking-tight leading-6 max-sm:px-5">
+            <p className="max-w-[1000px] text-justify font-medium leading-6 tracking-tight max-sm:px-5 max-sm:pt-2">
               Here’s our elevator pitch introducing our names, country,
               interests, and a fun fact. We shared our passions, why we care
               about these issues, our goals for solving them, and the unique
@@ -83,20 +83,20 @@ export function Challenges() {
     {
       title: "19/06/2025",
       content: (
-        <div className="flex justify-between gap-10 w-full">
-          <div className="w-[50%] max-md:hidden">
-            <h1 className="text-center font-bold text-[30px] tracking-tighter">
+        <div className="flex w-full justify-between gap-10">
+          <div className="w-1/2 max-md:hidden">
+            <h1 className="text-center text-[30px] font-bold tracking-tighter">
               Challenge 3
             </h1>
             {/* Horizontal line beside challenge title */}
-            <div className="relative flex items-center justify-center mx-6 my-2">
-              <span className="flex-grow border-t border-gray-400"></span>
-              <p className="font-medium text-meduim text-center border-gray-400 px-2">
+            <div className="relative mx-6 my-2 flex items-center justify-center">
+              <span className="grow border-t border-gray-400"></span>
+              <p className="border-gray-400 px-2 text-center font-medium">
                 Help Lab
               </p>
-              <span className="flex-grow border-t border-gray-400"></span>
+              <span className="grow border-t border-gray-400"></span>
             </div>
-            <p className="font-medium max-w-[1000px] text-dark-body-color/80 text-justify max-sm:pt-2 tracking-tight leading-6 max-sm:px-5">
+            <p className="max-w-[1000px] text-justify font-medium leading-6 tracking-tight max-sm:px-5 max-sm:pt-2">
               Here’s our elevator pitch introducing our names, country,
               interests, and a fun fact. We shared our passions, why we care
               about these issues, our goals for solving them, and the unique
@@ -112,24 +112,24 @@ export function Challenges() {
     {
       title: "26/06/2025",
       content: (
-        <div className="flex justify-between gap-10 w-full">
+        <div className="flex w-full justify-between gap-10">
           <div>
             <YouTube opts={VideoOptions} videoId="L7TfvuB3PA4" />
           </div>
 
-          <div className="w-[50%] max-md:hidden">
-            <h1 className="text-center font-bold text-[30px] tracking-tighter">
+          <div className="w-1/2 max-md:hidden">
+            <h1 className="text-center text-[30px] font-bold tracking-tighter">
               Challenge 4
             </h1>
             {/* Horizontal line beside challenge title */}
-            <div className="relative flex items-center justify-center mx-6 my-2">
-              <span className="flex-grow border-t border-gray-400"></span>
-              <p className="font-medium text-meduim text-center border-gray-400 px-2">
+            <div className="relative mx-6 my-2 flex items-center justify-center">
+              <span className="grow border-t border-gray-400"></span>
+              <p className="border-gray-400 px-2 text-center font-medium">
                 Hunt for Treasure
               </p>
-              <span className="flex-grow border-t border-gray-400"></span>
+              <span className="grow border-t border-gray-400"></span>
             </div>
-            <p className="font-medium max-w-[1000px] text-dark-body-color/80 text-justify max-sm:pt-2 tracking-tight leading-6 max-sm:px-5">
+            <p className="max-w-[1000px] text-justify font-medium leading-6 tracking-tight max-sm:px-5 max-sm:pt-2">
               Here’s our elevator pitch introducing our names, country,
               interests, and a fun fact. We shared our passions, why we care
               about these issues, our goals for solving them, and the unique
@@ -141,7 +141,7 @@ export function Challenges() {
     },
   ];
   return (
-    <div className="relative w-full overflow-clip">
+    <div className="relative w-full text-clip">
       <Timeline data={data} />
     </div>
   );
