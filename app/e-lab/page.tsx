@@ -1,4 +1,5 @@
 import { Challenges } from "@/components/Challenges";
+import Footer from "@/components/Footer";
 import React from "react";
 
 const ELab = () => {
@@ -16,6 +17,7 @@ const ELab = () => {
       <div>
         <Challenges />
       </div>
+      <Footer />
     </section>
   );
 };
