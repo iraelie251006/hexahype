@@ -12,7 +12,6 @@ import { SplineScene } from "./ui/splite";
 const Hero = () => {
   const { resolvedTheme } = useTheme();
   const [theme, setTheme] = useState<string | null>(null);
-  const [baseColor, setBaseColor] = useState<string>("ffffff");
 
   useEffect(() => {
     const currentTheme = localStorage.getItem("theme");
@@ -21,7 +20,7 @@ const Hero = () => {
 
   return (
     <main>
-      <div className="w-full h-screen relative">
+      <div className="relative h-screen w-full">
         {theme === "dark" ? (
           <Beams
             beamWidth={4.4}
@@ -44,35 +43,35 @@ const Hero = () => {
 
         <div className="absolute inset-0 z-10 flex items-center justify-center overflow-hidden">
           <div
-            className={`flex justify-between max-lg:justify-center items-center w-full h-screen`}
+            className={`flex h-screen w-full items-center justify-between max-lg:justify-center`}
           >
-            <div className="ml-10 max-lg:ml-0 flex justify-center flex-col items-center">
+            <div className="ml-10 flex flex-col items-center justify-center max-lg:ml-0">
               <ShinyText
                 text="Hexahype"
                 disabled={false}
                 speed={2}
-                className={`font-bold text-7xl md:text-9xl max-md:text-9xl max-sm:text-[80px] lg:text-9xl flex justify-start`}
+                className={`flex justify-start text-7xl font-bold max-md:text-9xl max-sm:text-[80px] md:text-9xl lg:text-9xl`}
               />
               <p
-                className={`ml-2 text-lg mt-5 font-mono dark:text-white/60 w-full flex max-sm:justify-center max-sm:text-[15px]`}
+                className={`ml-2 mt-5 flex w-full font-mono text-lg dark:text-white/60 max-sm:justify-center max-sm:text-[15px]`}
               >
                 Powering the Future, One Hype at a Time. <br />
                 Shaping Tomorrow with Every Move.
               </p>
             </div>
             {theme === "light" ? (
-              <div className="flex relative h-screen w-full max-md:hidden">
+              <div className="relative flex h-screen w-full max-md:hidden">
                 <SplineScene
                   scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                  className="w-full h-screen"
+                  className="h-screen w-full"
                 />
               </div>
             ) : (
               <div
-                className={`${theme === "light" ? "hidden" : "block"} mr-10 flex gap-5 flex-col max-lg:hidden`}
+                className={`${theme === "light" ? "hidden" : "block"} mr-10 flex flex-col gap-5 max-lg:hidden`}
               >
                 <div className="flex justify-center">
-                  <div className="h-[214px] w-[214px] rotate-45 top-7">
+                  <div className="top-7 size-[214px] rotate-45">
                     <DotGrid
                       dotSize={7}
                       gap={15}
@@ -87,7 +86,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="flex gap-20">
-                  <div className="h-[214px] w-[214px] rotate-45 top-7">
+                  <div className="top-7 size-[214px] rotate-45">
                     <LetterGlitch
                       glitchSpeed={50}
                       centerVignette={true}
@@ -95,7 +94,7 @@ const Hero = () => {
                       smooth={true}
                     />
                   </div>
-                  <div className="h-[214px] w-[214px] rotate-45 top-7">
+                  <div className="top-7 size-[214px] rotate-45">
                     <Squares
                       speed={0.5}
                       squareSize={40}

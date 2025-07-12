@@ -6,7 +6,7 @@ import { IconBrandInstagram, IconBrandYoutube } from "@tabler/icons-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-[#14DBD8]/20">
+    <footer className="bg-[#14DBD8]/20">
       <div className="w-screen border-2  bg-[url('/Sprinkle.svg')] bg-cover bg-center bg-no-repeat backdrop-blur-3xl">
         <div className="relative z-10 mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-10 text-sm text-gray-800 dark:text-white max-sm:mx-5 md:grid-cols-4">
           {/* Brand & Social */}
