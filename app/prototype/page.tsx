@@ -33,7 +33,7 @@ export default function page() {
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href={
-                "https://b2f427629ff147428e9b0c0901871d98-main.projects.builder.my/"
+                "https://linkreative.netlify.app"
               }
               target="_blank"
               className="flex h-11 items-center justify-center rounded-md bg-gradient-to-r from-cyan-500 to-cyan-800 px-8 py-3 text-lg text-white hover:from-cyan-600 hover:to-[#14DBD8] dark:to-[#14DBD8]/20"
@@ -171,7 +171,7 @@ export default function page() {
           <div className="flex flex-col items-center justify-center space-y-4">
             <Link
               href={
-                "https://b2f427629ff147428e9b0c0901871d98-main.projects.builder.my/"
+                "https://linkreative.netlify.app"
               }
               target="_blank"
               className="flex h-12 w-[350px] items-center justify-center rounded-md bg-gradient-to-r from-cyan-500 to-cyan-800 px-8 py-4 text-xl text-white hover:from-cyan-600 hover:to-[#14DBD8] dark:to-[#14DBD8]/20"
