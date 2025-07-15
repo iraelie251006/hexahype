@@ -11,17 +11,24 @@ import { SplineScene } from "./ui/splite";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
-  const [theme, setTheme] = useState<string | null>(null);
+  // const [theme, setTheme] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    const currentTheme = localStorage.getItem("theme");
-    setTheme(currentTheme);
-  }, [resolvedTheme]);
+  useEffect(() => setMounted(true), []);
 
+  // useEffect(() => {
+  //   const currentTheme = localStorage.getItem("theme");
+  //   setTheme(currentTheme);
+  // }, [resolvedTheme]);
+
+  if (!mounted) return null; // avoid flash
+
+  const isDark = resolvedTheme === "dark";
+  
   return (
     <main>
       <div className="relative h-screen w-full">
-        {theme === "dark" ? (
+        {isDark ? (
           <Beams
             beamWidth={4.4}
             beamHeight={25}
@@ -59,7 +66,7 @@ const Hero = () => {
                 Shaping Tomorrow with Every Move.
               </p>
             </div>
-            {theme === "light" ? (
+            {resolvedTheme === "light" ? (
               <div className="relative flex h-screen w-full max-md:hidden">
                 <SplineScene
                   scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
@@ -68,7 +75,7 @@ const Hero = () => {
               </div>
             ) : (
               <div
-                className={`${theme === "light" ? "hidden" : "block"} mr-10 flex flex-col gap-5 max-lg:hidden`}
+                className={`${resolvedTheme === "light" ? "hidden" : "block"} mr-10 flex flex-col gap-5 max-lg:hidden`}
               >
                 <div className="flex justify-center">
                   <div className="top-7 size-[214px] rotate-45">

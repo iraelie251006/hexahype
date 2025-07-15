@@ -1,13 +1,21 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Beams from "./ui/Beams";
 import Iridescence from "./ui/IredeScene";
+import { useTheme } from "next-themes";
 
 const Background = () => {
-  const currentTheme = localStorage.getItem("theme");
+  const { resolvedTheme } = useTheme();  // "light" or "dark"
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);  // ensure client-only render
+  }, []);
+
+  if (!mounted) return null;  // avoid rendering until theme is ready
   return (
     <section>
-      {currentTheme === "dark" ? (
+      {resolvedTheme === "dark" ? (
         <Beams
           beamWidth={4.4}
           beamHeight={25}
