@@ -38,7 +38,6 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
   const setY = useRef<SetterFn | null>(null);
   const pos = useRef({ x: 0, y: 0 });
 
-
   const data = items?.length ? items : [];
 
   useEffect(() => {
@@ -96,7 +95,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       ref={rootRef}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className={`relative w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center py-10 gap-4 bg-transparent ${className}`}
+      className={`relative grid size-full grid-cols-1 place-items-center gap-4 bg-transparent py-10 md:grid-cols-2 lg:grid-cols-3 ${className}`}
       style={
         {
           "--r": `${radius}px`,
@@ -110,7 +109,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
           key={i}
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(c.url)}
-          className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-transparent transition-colors duration-300 cursor-pointer"
+          className="group relative flex w-[300px] cursor-pointer flex-col overflow-hidden rounded-[20px] border-transparent transition-colors duration-300"
           style={
             {
               "--card-border": c.borderColor || "transparent",
@@ -120,30 +119,30 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
           }
         >
           <div
-            className="absolute inset-0 pointer-events-none transition-opacity duration-500 z-20 opacity-0 group-hover:opacity-100"
+            className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             style={{
               background:
                 "radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 70%)",
             }}
           />
-          <div className="relative z-10 flex-1 p-[10px] box-border">
+          <div className="relative z-10 box-border flex-1 p-[10px]">
             <img
               src={c.image}
               alt={c.title}
               loading="lazy"
-              className="w-full  object-cover rounded-[10px] h-[290px]"
+              className="h-[290px]  w-full rounded-[10px] object-cover"
             />
           </div>
-          <footer className="relative z-10 p-2 text-white font-sans grid grid-cols-[1fr_auto] gap-x-3 gap-y-1">
+          <footer className="relative z-10 grid grid-cols-[1fr_auto] gap-x-3 gap-y-1 p-2 font-sans text-white">
             <h3 className="m-0 text-[1.05rem] font-semibold">{c.title}</h3>
             {c.handle && (
-              <span className="text-[0.95rem] opacity-80 text-right">
+              <span className="text-right text-[0.95rem] opacity-80">
                 {c.handle}
               </span>
             )}
             <p className="m-0 text-[0.85rem] opacity-85">{c.subtitle}</p>
             {c.location && (
-              <span className="text-[0.85rem] opacity-85 text-right">
+              <span className="text-right text-[0.85rem] opacity-85">
                 {c.location}
               </span>
             )}
@@ -151,10 +150,10 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
         </article>
       ))}
       <div
-        className="absolute inset-0 pointer-events-none z-30"
+        className="pointer-events-none absolute inset-0 z-30"
         style={{
-          backdropFilter: "grayscale(1) brightness(0.78)",
-          WebkitBackdropFilter: "grayscale(1) brightness(0.78)",
+          backdropFilter: "grayscale(0) brightness(1)",
+          WebkitBackdropFilter: "grayscale(0) brightness(1)",
           background: "rgba(0,0,0,0.001)",
           maskImage:
             "radial-gradient(circle var(--r) at var(--x) var(--y),transparent 0%,transparent 15%,rgba(0,0,0,0.10) 30%,rgba(0,0,0,0.22)45%,rgba(0,0,0,0.35)60%,rgba(0,0,0,0.50)75%,rgba(0,0,0,0.68)88%,white 100%)",
@@ -164,10 +163,11 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       />
       <div
         ref={fadeRef}
-        className="absolute inset-0 pointer-events-none transition-opacity duration-&lsqb;250ms&rsqb z-40"
+        // eslint-disable-next-line tailwindcss/no-custom-classname
+        className="duration-&lsqb;250ms&rsqb pointer-events-none absolute inset-0 z-40 transition-opacity"
         style={{
-          backdropFilter: "grayscale(1) brightness(0.78)",
-          WebkitBackdropFilter: "grayscale(1) brightness(0.78)",
+          backdropFilter: "grayscale(0) brightness(1)",
+          WebkitBackdropFilter: "grayscale(0) brightness(1)",
           background: "rgba(0,0,0,0.001)",
           maskImage:
             "radial-gradient(circle var(--r) at var(--x) var(--y),white 0%,white 15%,rgba(255,255,255,0.90)30%,rgba(255,255,255,0.78)45%,rgba(255,255,255,0.65)60%,rgba(255,255,255,0.50)75%,rgba(255,255,255,0.32)88%,transparent 100%)",

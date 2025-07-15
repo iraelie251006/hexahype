@@ -9,6 +9,32 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
 
 
 @layer base {
@@ -66,7 +92,6 @@
     --chart-5: 340 75% 55%;
   }
 }
-
 
 
 @layer base {

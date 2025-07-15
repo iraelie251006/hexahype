@@ -11,15 +11,10 @@ import { SplineScene } from "./ui/splite";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
-  // const [theme, setTheme] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
-  // useEffect(() => {
-  //   const currentTheme = localStorage.getItem("theme");
-  //   setTheme(currentTheme);
-  // }, [resolvedTheme]);
 
   if (!mounted) return null; // avoid flash
 
