@@ -46,14 +46,14 @@ const Hero = () => {
             className={`flex h-screen w-full items-center justify-between max-lg:justify-center`}
           >
             <div className="ml-10 flex flex-col items-center justify-center max-lg:ml-0">
-              <ShinyText
+            <ShinyText
                 text="Hexahype"
                 disabled={false}
                 speed={2}
                 className={`flex justify-start text-7xl font-bold max-md:text-9xl max-sm:text-[80px] md:text-9xl lg:text-9xl`}
               />
               <p
-                className={`ml-2 mt-5 flex w-full font-mono text-lg dark:text-white/60 max-sm:justify-center max-sm:text-[15px]`}
+                className={`ml-2 mt-5 flex w-full font-mono text-lg text-slate-800 dark:text-white/60 max-sm:justify-center max-sm:text-[15px]`}
               >
                 Powering the Future, One Hype at a Time. <br />
                 Shaping Tomorrow with Every Move.

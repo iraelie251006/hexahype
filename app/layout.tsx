@@ -49,6 +49,14 @@ export const metadata: Metadata = {
     type: "website",
   },
   description: "Hexahype is where art meets technology, where young creators transform ideas into reality. Join our community of visionary artists and designers shaping tomorrow's creative landscape.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Welcome To Hexahype",
+    description:
+      "Hexahype is where art meets technology, where young creators transform ideas into reality. Join our community of visionary artists and designers shaping tomorrow's creative landscape.",
+    creator: "@hexahype",
+    images: ["https://hexahype.vercel.app/hexahype.jpeg"],
+  },
 };
 
 export default function RootLayout({
@@ -63,7 +71,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
