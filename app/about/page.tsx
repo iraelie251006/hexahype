@@ -291,14 +291,18 @@ export default function About() {
               Join a movement that&apos;s transforming creative expression into
               economic opportunity
             </p>
-
-            <button className="group relative rounded-full bg-gradient-to-r from-[#14DBD8] to-purple-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-              <Link href={"https://linkreative.netlify.app"} className="flex items-center gap-2">
-                Join the Movement
-                <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
+            <div className="flex items-center justify-center">
+              <Link
+                href={"https://linkreative.netlify.app"}
+                className="group relative flex w-80 justify-center rounded-full bg-gradient-to-r from-[#14DBD8] to-purple-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <span className="flex items-center gap-2">
+                  Join the Movement
+                  <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
+                </span>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#14DBD8] to-purple-500 opacity-30 blur transition-opacity group-hover:opacity-50"></div>
               </Link>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#14DBD8] to-purple-500 opacity-30 blur transition-opacity group-hover:opacity-50"></div>
-            </button>
+            </div>
           </div>
         </div>
       </div>
