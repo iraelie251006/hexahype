@@ -33,15 +33,20 @@ export default function About() {
       {/* Geometric Shapes */}
       <div className="pointer-events-none absolute inset-0">
         <div className="animate-spin-slow absolute right-1/4 top-32 size-4 rotate-45 border border-[#14DBD8]/30"></div>
+        {/* Left Geometry Shapes */}
         <div className="animate-spin-slow absolute right-12 top-80 size-4 rotate-45 border border-[#14DBD8]/30"></div>
         <div className="animate-spin-slow absolute right-12 top-[640px] size-4 rotate-45 border border-[#14DBD8]/30"></div>
         <div className="animate-spin-slow absolute right-12 top-[1590px] size-4 rotate-45 border border-[#14DBD8]/30"></div>
         <div className="animate-spin-slow absolute right-12 top-[2040px] size-4 rotate-45 border border-[#14DBD8]/30"></div>
+        {/* Right Geometry Shapes */}
+        <div className="animate-spin-slow absolute left-12 top-80 size-4 rotate-45 border border-[#14DBD8]/30"></div>
+        <div className="animate-spin-slow absolute left-12 top-[640px] size-4 rotate-45 border border-[#14DBD8]/30"></div>
+        <div className="animate-spin-slow absolute left-12 top-[1590px] size-4 rotate-45 border border-[#14DBD8]/30"></div>
+        <div className="animate-spin-slow absolute left-12 top-[2040px] size-4 rotate-45 border border-[#14DBD8]/30"></div>
 
-
-
-        <div className="animate-bounce-slow absolute bottom-1/3 left-1/4 size-6 rotate-12 border border-purple-400/30"></div>
+        <div className="animate-bounce-slow absolute bottom-1/3 left-1/4 size-6 rotate-12 border-4 border-purple-400/30"></div>
         <div className="absolute right-10 top-1/2 size-8 rotate-45 bg-gradient-to-r from-[#14DBD8]/20 to-transparent"></div>
+        <div className="absolute left-10 top-1/2 size-8 rotate-45 bg-gradient-to-r from-[#14DBD8]/20 to-transparent"></div>
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
