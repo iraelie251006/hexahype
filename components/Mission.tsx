@@ -94,6 +94,7 @@ export default function MissionSection() {
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
             <Link
               href={"https://linkreative.netlify.app"}
+              target="_blank"
               className="group relative flex items-center rounded-full bg-gradient-to-r from-[#14DBD8] to-[#14DBD8]/80 px-8 py-4 text-lg font-semibold text-black shadow-lg transition-all duration-300 hover:scale-105 hover:from-[#14DBD8]/90 hover:to-[#14DBD8] hover:shadow-[#14DBD8]/25 dark:text-black"
             >
               Start Your Journey
@@ -103,7 +104,7 @@ export default function MissionSection() {
             <div className="text-sm text-gray-600 dark:text-gray-400">
               Join{" "}
               <span className="font-medium text-[#14DBD8] dark:text-[#14DBD8]">
-                10,000+
+                6+
               </span>{" "}
               young creators
             </div>
