@@ -8,7 +8,7 @@ const About = () => {
     <section className="bg-[#F8F8FF] dark:bg-[#14DBD8]/20">
       <div className="relative h-full">
         <h1
-          className="flex justify-center bg-[rgba(0,0,0,0.001)] pt-5 text-7xl font-bold backdrop-brightness-[.78] backdrop-grayscale"
+          className="flex items-center justify-center bg-[rgba(0,0,0,0.001)] pt-5 text-7xl font-bold backdrop-brightness-[.78] backdrop-grayscale max-sm:text-6xl"
           style={{
             backdropFilter: "grayscale(0) brightness(1)",
             WebkitBackdropFilter: "grayscale(0) brightness(1)",
