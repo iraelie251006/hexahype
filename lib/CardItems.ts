@@ -15,7 +15,7 @@ export const items = [
       handle: "@jesseraura",
       borderColor: "#10B981",
       gradient: "linear-gradient(210deg,#10B981,#000)",
-      url: "https://linkedin.com/in/",
+      url: "https://www.instagram.com/_ma.g.ic/",
     },
     {
       image: "images/Prince.jpeg",
@@ -24,7 +24,7 @@ export const items = [
       handle: "@princenkuba",
       borderColor: "#F59E0B",
       gradient: "linear-gradient(165deg,#F59E0B,#000)",
-      url: "https://dribbble.com/",
+      url: "https://www.linkedin.com/in/mico-prince-749b5a324/",
     },
     {
       image: "images/Gift.jpeg",
@@ -42,7 +42,7 @@ export const items = [
       handle: "@gisa",
       borderColor: "#8B5CF6",
       gradient: "linear-gradient(225deg,#8B5CF6,#000)",
-      url: "https://github.com/",
+      url: "https://www.instagram.com/gisa_klay/",
     },
     {
       image: "images/David.jpeg",
@@ -51,6 +51,6 @@ export const items = [
       handle: "@david",
       borderColor: "#06B6D4",
       gradient: "linear-gradient(135deg,#06B6D4,#000)",
-      url: "https://aws.amazon.com/",
+      url: "https://www.instagram.com/david1ne_/",
     },
   ];
