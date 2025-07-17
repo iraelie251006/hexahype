@@ -80,11 +80,13 @@ export default function About() {
               </span>{" "}
               of creative technology. We&apos;re a youth-driven collective that
               bridges the gap between traditional Rwandan artistry and
-              cutting-edge digital platforms. Our mission:{" "}
+              cutting-edge digital platforms.{" "}
+              <span className="font-bold">Our mission</span> :{" "}
               <span className="font-semibold text-purple-500">
-                empower young creators
+                Inspire & empower young generation
               </span>{" "}
-              through innovative tech solutions.
+              to recognize their unique talents and turn them into sustainable
+              sources of income.
             </p>
           </div>
         </div>
@@ -99,7 +101,7 @@ export default function About() {
                 <TrendingDown className="size-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-slate-800 dark:text-white">
-                The Challenge We Face
+                Problem Statement
               </h2>
             </div>
 
@@ -119,13 +121,20 @@ export default function About() {
                   </div>
                 </div>
                 <p className="text-slate-600 dark:text-slate-300">
-                  A critical gap exists between education and practical skills,
-                  particularly affecting high-school graduates in Kigali and
-                  growing regions.
+                  In Rwanda, 21.97% of youth were unemployed in 2023, according
+                  to national labor statistics. This challenge is especially
+                  affecting talented youth who are finishing high school,
+                  particularly in Kigali and other rapidly developing areas. The
+                  problem typically occurs around graduation periods when a
+                  large number of young people enter the job market with limited
+                  qualifications and few available job opportunities. As the
+                  number of high school graduates continues to grow, the lack of
+                  sustainable employment options puts many young people at risk
+                  of economic hardship.
                 </p>
               </div>
 
-              <div className="space-y-4">
+              <div className="flex flex-col justify-center space-y-4">
                 <div className="flex items-center gap-3">
                   <Target className="size-5 text-[#14DBD8]" />
                   <span className="text-slate-700 dark:text-slate-300">
@@ -233,7 +242,11 @@ export default function About() {
               <div>
                 <p className="mb-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
                   Our journey began at{" "}
-                  <Link href={"https://niyoartscenter.com/"} target="_blank" className="font-semibold text-purple-500">
+                  <Link
+                    href={"https://niyoartscenter.com/"}
+                    target="_blank"
+                    className="font-semibold text-purple-500"
+                  >
                     Niyo Art Center
                   </Link>
                   , where we conducted in-depth interviews with emerging
