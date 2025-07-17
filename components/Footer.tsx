@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, MailPlus } from "lucide-react";
 import ShinyText from "./ui/Shine";
 import Link from "next/link";
 import { IconBrandInstagram, IconBrandYoutube } from "@tabler/icons-react";
+import { LinkPreview } from "./ui/link-preview";
 
 export default function Footer() {
   return (
@@ -25,7 +26,10 @@ export default function Footer() {
               creation consultation.
             </p>
             <div className="flex gap-3 text-gray-600">
-              <Link href={"https://www.instagram.com/hexahype/"} target={"_blank"}>
+              <Link
+                href={"https://www.instagram.com/hexahype/"}
+                target={"_blank"}
+              >
                 <IconBrandInstagram className="size-5 hover:text-black dark:text-white/75 dark:hover:text-white" />
               </Link>
               <Link href={"https://www.youtube.com/hexahype"} target={"_blank"}>
@@ -120,8 +124,22 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mx-auto my-10 flex max-w-7xl items-center justify-between border-t border-black pt-4 text-xs text-gray-500 dark:border-white">
           <span className="mt-2 pt-2 text-sm dark:text-white">
-            © 2024 HEXAHYPE.
+            © 2025 HEXAHYPE.
           </span>
+          <div className="mt-2 pt-2 text-sm dark:text-white">
+            Developed by{" "}
+            <LinkPreview
+              url={
+                "https://www.linkedin.com/in/niyubwayo-irakoze-elie-14b003284/"
+              }
+              imageSrc="/images/LinkedInElie.jpeg"
+              isStatic
+              className="font-bold text-black dark:text-[#14DBD8]"
+            >
+              Irakoze Elie
+            </LinkPreview>{" "}
+            reach out
+          </div>
           <span className="mt-2 pt-2 text-sm dark:text-white">
             All rights reserved.
           </span>
