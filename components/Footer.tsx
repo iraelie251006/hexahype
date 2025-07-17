@@ -122,7 +122,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mx-auto my-10 flex max-w-7xl items-center justify-between border-t border-black pt-4 text-xs text-gray-500 dark:border-white">
+        <div className="mx-auto my-10 flex max-w-7xl items-center justify-between border-t border-black pt-4 text-xs text-gray-500 dark:border-white max-sm:flex-col">
           <span className="mt-2 pt-2 text-sm dark:text-white">
             © 2025 HEXAHYPE.
           </span>
