@@ -3,8 +3,11 @@ import React from "react";
 import YouTube from "react-youtube";
 import { Timeline } from "@/components/ui/timeline";
 import { UseResponsiveWidth } from "@/lib/YoutubeOptions";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export function Challenges() {
+  const { resolvedTheme } = useTheme();
   const width = UseResponsiveWidth();
 
   const VideoOptions = {
@@ -165,6 +168,56 @@ export function Challenges() {
           </div>
           <div>
             <YouTube opts={VideoOptions} videoId="vyJEt67Ilj8" />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "17/07/2025",
+      content: (
+        <div className="flex w-full justify-between gap-10">
+          <div>
+            {resolvedTheme === "dark" ? (
+              <Image
+                src="/images/DigitalPrintDark.jpeg"
+                alt="Digital Print Image"
+                height={400}
+                width={600}
+                className="rounded-lg"
+              />
+            ) : (
+              <Image
+                src="/images/DigitalPrintLight.jpeg"
+                alt="Digital Print Image"
+                height={400}
+                width={600}
+                className="rounded-lg"
+              />
+            )}
+          </div>
+
+          <div className="w-1/2 max-md:hidden">
+            <h1 className="text-center text-[30px] font-bold tracking-tighter">
+              Challenge 6
+            </h1>
+            {/* Horizontal line beside challenge title */}
+            <div className="relative mx-6 my-2 flex items-center justify-center">
+              <span className="grow border-t border-gray-400"></span>
+              <p className="border-gray-400 px-2 text-center font-medium">
+                Digital Print
+              </p>
+              <span className="grow border-t border-gray-400"></span>
+            </div>
+            <p className="max-w-[1000px] text-justify font-medium leading-6 tracking-tight max-sm:px-5 max-sm:pt-2">
+              Challenge Six invited us to build a digital-print website as a
+              comprehensive showcase of our team. We designed an interactive
+              space that introduces each group member, outlines our roles and
+              contributions, and highlights the processes and achievements that
+              defined our collaboration. By weaving together polished visuals,
+              concise bios, and project insights, the site captures who we are,
+              what we do, and how we achieved it in a cohesive, meaningful
+              format
+            </p>
           </div>
         </div>
       ),

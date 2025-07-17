@@ -1,24 +1,25 @@
-import { IconHome, IconUser, IconMessage } from "@tabler/icons-react";
+import { IconHome, IconUser } from "@tabler/icons-react";
+import { Mountain, Rocket } from "lucide-react";
 
 export const navItems = [
   {
     name: "Home",
     link: "/",
-    icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    icon: <IconHome className="size-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "About",
     link: "/about",
-    icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    icon: <IconUser className="size-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "E-Lab",
     link: "/e-lab",
-    icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    icon: <Mountain className="size-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Prototype",
     link: "/prototype",
-    icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    icon: <Rocket className="size-4 text-neutral-500 dark:text-white" />,
   },
 ];

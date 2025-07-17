@@ -233,9 +233,9 @@ export default function About() {
               <div>
                 <p className="mb-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
                   Our journey began at{" "}
-                  <span className="font-semibold text-purple-500">
+                  <Link href={"https://niyoartscenter.com/"} className="font-semibold text-purple-500">
                     Niyo Art Center
-                  </span>
+                  </Link>
                   , where we conducted in-depth interviews with emerging
                   artists. Their stories became our blueprint.
                 </p>

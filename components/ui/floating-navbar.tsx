@@ -7,9 +7,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Toggle } from "./toggle";
 import { ThemeToggle } from "../ThemeToggle";
-
 
 export const FloatingNav = ({
   navItems,
@@ -29,7 +27,7 @@ export const FloatingNav = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      const direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
@@ -71,14 +69,14 @@ export const FloatingNav = ({
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <span className="hidden text-sm sm:block">{navItem.name}</span>
           </a>
         ))}
-        <div className="border text-sm font-medium relative border-slate-600 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+        <div className="relative rounded-full border border-slate-600 px-4 py-2 text-sm font-medium text-black dark:border-white/[0.2] dark:text-white">
           <span>
             <ThemeToggle />
           </span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
+          <span className="absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
         </div>
       </motion.div>
     </AnimatePresence>
